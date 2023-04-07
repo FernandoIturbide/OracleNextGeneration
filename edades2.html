@@ -1,6 +1,28 @@
 <meta charset="utf-8" ; />
 <h1>Edades</h1>
 <script>
+  function saltarLinea() {
+    document.write("<br>");
+  }
+  function mostrarEdad(nombre, anioNacimiento) {
+    anio = 2023;
+    document.write(nombre + " tiene " + (anio - anioNacimiento) + " años");
+    saltarLinea();
+  }
+  function mostrarPromedioEdad(nombre1, nombre2, nombre3, edad1, edad2, edad3) {
+    var promedio = (edad1 + edad2 + edad3) / 3;
+    promedio = Math.round(promedio);
+    document.write(
+      "El promedio de las edades de " +
+        nombre1 +
+        ", " +
+        nombre2 +
+        " y " +
+        nombre3 +
+        " es de: " +
+        promedio
+    );
+  }
   var anio = 2025;
   var saltoDeLinea = "<br><br><br><br>";
   document.write("Juan tiene " + (anio - 2000) + " años");
@@ -12,4 +34,10 @@
   anio = 2030;
   document.write("Carlos tiene " + (anio - 2005) + " años");
   document.write(saltoDeLinea);
+  mostrarEdad("Fernando", 2004);
+  document.write(saltoDeLinea);
+  mostrarEdad("Alberto", 2008);
+  document.write(saltoDeLinea);
+  //:v
+  mostrarPromedioEdad("Fernando", "Alberto", "Juan", 19, 15, 25);
 </script>

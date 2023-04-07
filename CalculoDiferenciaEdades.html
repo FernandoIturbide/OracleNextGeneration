@@ -1,0 +1,30 @@
+<meta charset="utf-8" ; />
+<h1>Edades</h1>
+<script>
+  function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+  }
+  function mostrarDiferenciaEdad(
+    nombre1,
+    nombre2,
+    anioNacimiento1,
+    anioNacimiento2
+  ) {
+    var diferencia = anioNacimiento2 - anioNacimiento1;
+    document.write(
+      "La diferencia de edad entre " +
+        nombre1 +
+        " y " +
+        nombre2 +
+        " es de: " +
+        diferencia
+    );
+    saltarLinea();
+  }
+  var nombre1 = "Fernando";
+  var nombre2 = "Alberto";
+  var anioNacimiento1 = 2004;
+  var anioNacimiento2 = 2008;
+  mostrarDiferenciaEdad(nombre1, nombre2, anioNacimiento1, anioNacimiento2);
+</script>
