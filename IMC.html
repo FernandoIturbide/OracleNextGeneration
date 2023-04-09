@@ -10,9 +10,9 @@
     document.write(frase);
     saltarLinea();
   }
-  function calcularIMC(nombre, peso, altura) {
+  function calcularIMC(peso, altura) {
     var imc = peso / (altura * altura);
-    imprimir("El IMC de " + nombre + " es: " + imc);
+    return imc;
   }
   function calcularIMCs(peso1, altura1, nombre1, peso2, altura2, nombre2) {
     imc1 = peso1 / (altura1 * altura1);
