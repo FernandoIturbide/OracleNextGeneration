@@ -1,0 +1,30 @@
+<meta charset="utf-8">
+<h1>¿Puedo conducir?</h1>
+<script>
+    function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+    function Imprimir(frase){
+        document.write(frase);
+    }
+    edadPadre=42;
+    edadMadre=38
+    edadHijo=15;
+    edadHija=12;
+    edadHjo3=10;
+    var totalEdades=edadPadre+edadMadre+edadHijo+edadHija+edadHjo3;
+    var promedioEdades=totalEdades/5;
+    Imprimir("La edad promedio de la familia es: "+promedioEdades);
+    var miembros=parseInt(prompt("Ingrese la cantidad de miembros de la familia: "));
+    i=1;
+    while(i<=miembros){
+        var edad=parseInt(prompt("Ingrese la edad del miembro "+i+": "));
+        totalEdades=totalEdades+edad;
+        i++;
+    }
+    promedioEdades=totalEdades/miembros;
+
+
+</script>

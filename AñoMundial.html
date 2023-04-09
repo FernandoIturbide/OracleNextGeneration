@@ -1,0 +1,21 @@
+<meta charset="utf-8" />
+<h1>Año mundial fifa</h1>
+
+<script>
+  function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+  }
+  function Imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+  }
+  var anio = 1930;
+  var limite = parseInt(prompt("Ingrese el año limite: "));
+  while (anio <= limite) {
+    Imprimir("Hubo un mundial en el año " + anio);
+    anio = anio + 4;
+  }
+  alert("fin");
+</script>

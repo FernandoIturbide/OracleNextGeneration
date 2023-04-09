@@ -1,0 +1,27 @@
+<meta charset="utf-8">
+<title>Sorteo</title>
+<script>
+    function saltarLinea(){
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+    }
+    function Imprimir(frase){
+        document.write(frase);
+    }
+    function sortear(n){
+        var numero=Math.round(Math.random()*n);
+        return numero;
+    }
+    var n=50;
+    num=sortear(n);
+    var numeroLanzado=parseInt(prompt("Ingrese un número entre 0-"+n+": "));
+
+    if (numeroLanzado<num) {
+        Imprimir("El número que elegiste es menor que "+num);
+    } else if (numeroLanzado>num) {
+        Imprimir("El número que elegiste es mayor que "+num);
+    } else if (numeroLanzado==num) {
+        Imprimir("El número que elegiste es igual a "+num);
+    }
+</script>

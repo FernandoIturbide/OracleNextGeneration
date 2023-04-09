@@ -1,20 +1,35 @@
-<meta charset="uft-8">
+<meta charset="uft-8" />
 <h1>IMC</h1>
 <script>
-    function saltarLinea() {
-        document.write("<br>");
-        document.write("<br>");
-        document.write("<br>");
+  function saltarLinea() {
+    document.write("<br>");
+    document.write("<br>");
+    document.write("<br>");
+  }
+  function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+  }
+  function calcularIMC(peso, altura) {
+    var imc = peso / (altura * altura);
+    return imc;
+  }
+  nombre = prompt("Ingrese su nombre");
+  peso = prompt("Ingrese su peso");
+  altura = prompt("Ingrese su altura");
+  imprimir("El IMC de " + nombre + " es " + calcularIMC(peso, altura));
+  if (calcularIMC(peso, altura) < 18.5) {
+    imprimir("IMC abajo de lo recomendado");
+  } else if (calcularIMC(peso, altura) >= 18.5) {
+    if (calcularIMC(peso, altura) < 25) {
+      imprimir("IMC está normal");
     }
-    function imprimir(frase) {
-        document.write(frase);
-        saltarLinea();
+  } else if (calcularIMC(peso, altura) >= 25) {
+    if (calcularIMC(peso, altura) < 30) {
+      imprimir("IMC considerado sobrepeso");
     }
-    function calcularIMC(peso, altura) {
-        var imc = peso / (altura * altura);
-        return imc;
-    }
-    peso= prompt("Ingrese su peso");
-    altura= prompt("Ingrese su altura");
-    imprimir(calcularIMC(peso, altura));
+  }
+  else if (calcularIMC(peso, altura) >= 30) {
+    imprimir("Obesidad");
+  }
 </script>
