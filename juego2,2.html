@@ -1,0 +1,51 @@
+<meta charset="utf-8" />
+<input />
+<button>Verificar si acertó con el secreto</button>
+<script>
+  function aleatorio() {
+    return Math.round(Math.random() * 10);
+    //var secreto = Math.round(Math.random() * 10);
+  }
+  function sortearNuemro(numero) {
+    var secreto = [];
+    var contador = 1;
+    while (contador <= numero) {
+      var numeroAleatorio = aleatorio();
+      console.log(numeroAleatorio);
+      var encontrado = false;
+      if (numeroAleatorio != 0) {
+        for (var i = 0; i < secreto.length; i++) {
+          if (numeroAleatorio == secreto[i]) {
+            encontrado = true;
+            break;
+          }
+        }
+        if (encontrado == false) {
+          secreto.push(numeroAleatorio);
+          contador++;
+        }
+      }
+    }
+    return secreto;
+  }
+  function verificar() {
+    var encontrado = false;
+    for (var i = 0; i < secreto.length; i++) {
+      if (parseInt(input.value) == secreto[i]) {
+        alert("Acertaste");
+        encontrado = true;
+        break;
+      }
+    }
+    if (encontrado == false) {
+      alert("Fallaste");
+    }
+    input.value = "";
+    input.focus();
+  }
+  var secreto = sortearNuemro(4);
+  var boton = document.querySelector("button");
+  boton.onclick = verificar;
+    var input = document.querySelector("input"); //Traer todo el obejeto input
+    
+</script>

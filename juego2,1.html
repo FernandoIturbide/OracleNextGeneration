@@ -1,0 +1,26 @@
+<meta charset="utf-8" />
+<input />
+<button>Verificar si acertó con el secreto</button>
+<script>
+  //var secreto = Math.round(Math.random() * 10);
+  var secreto = [3, 5, 7, 9];
+  var input = document.querySelector("input"); //Traer todo el obejeto input
+  input.focus();
+  function verificar() {
+    var encontrado = false;
+    for (let i = 0; i < secreto.length; i++) {
+      if (parseInt(input.value) == secreto[i]) {
+        alert("Acertaste");
+        encontrado = true;
+        break;
+      } 
+    }
+    if (encontrado==false) {
+      alert("Fallaste");
+    }
+    input.value = "";
+    input.focus();
+  }
+  var boton = document.querySelector("button");
+  boton.onclick = verificar;
+</script>
